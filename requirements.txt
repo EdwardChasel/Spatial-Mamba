@@ -1,0 +1,17 @@
+torch # for full alignment 2.0.1+cu118
+torchvision
+torchaudio
+packaging
+triton
+timm==0.4.12
+pytest 
+chardet 
+yacs 
+termcolor
+submitit 
+tensorboardX
+fvcore
+seaborn
+opencv-python
+tensorboard
+Cython
