@@ -22,6 +22,8 @@
 
 </div>
 
+#### 🚩Accepted by ICLR2025
+
 ## Abstaract
 
 Selective state space models (SSMs), such as Mamba, highly excel at capturing long-range dependencies in 1D sequential data, while their applications to 2D vision tasks still face challenges. Current visual SSMs often convert images into 1D sequences and employ various scanning patterns to incorporate local spatial dependencies. However, these methods are limited in effectively capturing the complex image spatial structures and the increased computational cost caused by the lengthened scanning paths. To address these limitations, we propose Spatial-Mamba, a novel approach that establishes neighborhood connectivity directly in the state space. Instead of relying solely on sequential state transitions, we introduce a structure-aware state fusion equation, which leverages dilated convolutions to capture image spatial structural dependencies, significantly enhancing the flow of visual contextual information. Spatial-Mamba proceeds in three stages: initial state computation in a unidirectional scan, spatial context acquisition through structure-aware state fusion, and final state computation using the observation equation. Our theoretical analysis shows that Spatial-Mamba unifies the original Mamba and linear attention under the same matrix multiplication framework, providing a deeper understanding of our method. Experimental results demonstrate that Spatial-Mamba, even with a single scan, attains or surpasses the state-of-the-art SSM-based models in image classification, detection and segmentation.
@@ -113,7 +115,7 @@ Selective state space models (SSMs), such as Mamba, highly excel at capturing lo
 | Spatial-Mamba-T  | Mask R-CNN |  1x   |  47.6   /   42.9   |  46M   | 261G  | [ckpt](https://drive.google.com/file/d/1lmA0_pBQbvuMkJD1R5m3oS_2jXaSy3N3/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_tiny.py) |
 | Spatial-Mamba-S  | Mask R-CNN |  1x   |  49.2   /   44.0   |  63M   | 315G  | [ckpt](https://drive.google.com/file/d/1pzjz1A6nWA9W2FW2Ymg5JSAMbvxmc2hP/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_small.py) |
 | Spatial-Mamba-B  | Mask R-CNN |  1x   |  50.4   /   45.1   |  115M   | 494G  | [ckpt](https://drive.google.com/file/d/1oTyT0q88ernqc1_IyqBWHrVJJPGNRN8r/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_base.py) |
-| Spatial-Mamba-T  | Mask R-CNN |  3x   |  49.3   /   43.6   |  46M   | 261G  | [ckpt](https://drive.google.com/file/d/1PY0_8ZCwogssmaULdc6MzVbCTGm_83Ew/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_tiny_3x.py) |
+| Spatial-Mamba-T  | Mask R-CNN |  3x   |  49.3   /   43.8   |  46M   | 261G  | [ckpt](https://drive.google.com/file/d/1U86t0wQ0ovgAGmnsuLu9YZgBcOQu6wVm/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_tiny_3x.py) |
 | Spatial-Mamba-S  | Mask R-CNN |  3x   |  50.5   /   44.6   |  63M   | 315G  | [ckpt](https://drive.google.com/file/d/19fDAk8cyMplgVRKqU0BC_3l1NxXzHYl_/view?usp=drive_link) \| [config](detection/configs/spatialmamba/mask_rcnn_spatialmamba_fpn_coco_small_3x.py) |
 
 </div>
@@ -205,11 +207,12 @@ Selective state space models (SSMs), such as Mamba, highly excel at capturing lo
 ## 🖊️ Citation
 
 ```BibTeX
-@article{xiao2024spatialmamba,
+@inproceedings{
+  xiao2025spatialmamba,
   title={Spatial-Mamba: Effective Visual State Space Models via Structure-Aware State Fusion},
   author={Chaodong Xiao and Minghan Li and Zhengqiang Zhang and Deyu Meng and Lei Zhang},
-  journal={arXiv preprint arXiv:2410.15091},
-  year={2024}
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
 }
 ```
 
